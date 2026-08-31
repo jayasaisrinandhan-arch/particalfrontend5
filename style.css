@@ -1,0 +1,367 @@
+/* ==========================
+   Basic Reset
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================
+   Body
+========================== */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background: #f2f5f9;
+
+    min-height: 100vh;
+
+    padding: 30px;
+}
+
+
+/* ==========================
+   Main Container
+========================== */
+
+.container {
+    max-width: 1000px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+}
+
+
+/* ==========================
+   Header
+========================== */
+
+.form-header {
+    text-align: center;
+
+    padding: 30px;
+
+    background: #2563eb;
+
+    color: white;
+}
+
+.form-header h1 {
+    margin-bottom: 10px;
+
+    font-size: 32px;
+}
+
+.form-header p {
+    font-size: 16px;
+}
+
+
+/* ==========================
+   Form
+========================== */
+
+form {
+    padding: 30px;
+}
+
+
+/* ==========================
+   Fieldset
+========================== */
+
+fieldset {
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+legend {
+    padding: 0 10px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #2563eb;
+}
+
+
+/* ==========================
+   CSS GRID
+========================== */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ==========================
+   Form Groups
+========================== */
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #333;
+}
+
+
+/* ==========================
+   Input / Select / Textarea
+========================== */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================
+   Radio Buttons
+========================== */
+
+.radio-group {
+    display: flex;
+
+    gap: 20px;
+
+    padding-top: 10px;
+}
+
+.radio-group label {
+    font-weight: normal;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.radio-group input {
+    width: auto;
+}
+
+
+/* ==========================
+   Declaration
+========================== */
+
+.declaration {
+    margin-bottom: 25px;
+
+    padding: 15px;
+
+    background: #f8fafc;
+
+    border-radius: 6px;
+}
+
+.declaration label {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    line-height: 1.5;
+}
+
+.declaration input {
+    width: auto;
+
+    margin-top: 4px;
+}
+
+
+/* ==========================
+   Buttons
+========================== */
+
+.button-group {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+button {
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.9;
+}
+
+.submit-btn {
+    background: #2563eb;
+
+    color: white;
+}
+
+.reset-btn {
+    background: #64748b;
+
+    color: white;
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .form-header h1 {
+        font-size: 28px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 0;
+    }
+
+    .container {
+        border-radius: 0;
+
+        min-height: 100vh;
+    }
+
+    .form-header {
+        padding: 25px 15px;
+    }
+
+    .form-header h1 {
+        font-size: 24px;
+    }
+
+    .form-header p {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    legend {
+        font-size: 18px;
+    }
+
+    .radio-group {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
